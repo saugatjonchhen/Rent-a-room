@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/new_listings_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.saugatjonchhen.rentaroom.NewListing.NewListingsActivity">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar_new_listings"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="@color/colorPrimary">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/imgBtn_back"-->
+            <!--android:layout_width="18dp"-->
+            <!--android:layout_height="18dp"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:background="@null"-->
+            <!--android:src="@drawable/back" />-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+</LinearLayout>

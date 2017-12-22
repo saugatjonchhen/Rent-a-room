@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "765945604161",
+    "project_id": "firebase-rent-a-room"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765945604161:android:123132a336ab538e",
+        "android_client_info": {
+          "package_name": "com.example.saugatjonchhen.rentaroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765945604161-crp5hdsm6tcne4366cr93jmmek0vv9uq.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "765945604161-p2lbl7dn21t4aij5kr8cqobhrcb3a2mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saugatjonchhen.rentaroom",
+            "certificate_hash": "5ede8217cccf34e9409194ebecec4a263cdd3656"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-fCTejzaw4B9YmZlNpfEZAgtHKAiYU8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

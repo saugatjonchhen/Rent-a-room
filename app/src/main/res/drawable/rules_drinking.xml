@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- NOTE: order is important (the first matching state(s) is what is rendered) -->
+    <item
+        android:state_checkable="true"
+        android:drawable="@drawable/no_drinking_01" />
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/no_drinking_02" />
+    <item
+        android:drawable="@drawable/no_drinking_01" />
+</selector>
