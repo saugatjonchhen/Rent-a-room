@@ -81,8 +81,20 @@ public class LoginFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        if ((MainActivity.SaveSharedPreference.getUserName(getActivity()).length() == 0) && login_flag == false) {
+            // call Login Activity
+            loginFrame.setVisibility(View.VISIBLE);
+            profileFrame.setVisibility(View.GONE);
+        } else {
+            // Stay at the current activity.
+            loginFrame.setVisibility(View.GONE);
+            profileFrame.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -106,7 +118,7 @@ public class LoginFragment extends Fragment {
         fblogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.SaveSharedPreference.setUserName(getActivity(), "Saugat");
+                MainActivity.SaveSharedPreference.setUserName(getActivity(), "Facebook");
                 login_flag = true;
             }
         });
@@ -179,7 +191,7 @@ public class LoginFragment extends Fragment {
                 login_flag = true;
                 loginFrame.setVisibility(View.GONE);
                 profileFrame.setVisibility(View.VISIBLE);
-                MainActivity.SaveSharedPreference.setUserName(getActivity(), "Saugat");
+                MainActivity.SaveSharedPreference.setUserName(getActivity(), "Google");
             } else {
                 login_flag = false;
                 profileFrame.setVisibility(View.GONE);

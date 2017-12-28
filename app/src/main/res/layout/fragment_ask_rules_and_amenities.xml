@@ -61,6 +61,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_wifi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -68,6 +69,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_wifi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/wifi" />
@@ -83,6 +85,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_tv_channel"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -90,6 +93,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_tv_channel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv" />
@@ -105,6 +109,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_air_conditioner"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -112,6 +117,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_air_conditioner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -128,6 +134,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_elevator"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -135,6 +142,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_elevator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/elevator" />
@@ -156,6 +164,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_furnished"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -163,6 +172,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_furnished"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/furnished" />
@@ -178,6 +188,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/amenities_parking"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -185,6 +196,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_amenities_parking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/parking" />
@@ -193,8 +205,25 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/amenities_security"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/amenities_security"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/txt_amenities_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/security" />
 
             </LinearLayout>
 
@@ -232,6 +261,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/rules_no_drinking"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -239,6 +269,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_rules_no_drinking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/drinking" />
@@ -254,6 +285,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/rules_no_drugs"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -261,6 +293,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_rules_no_drugs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/drugs" />
@@ -276,6 +309,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/rules_no_pets"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -283,6 +317,7 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_rules_no_pets"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -299,6 +334,7 @@
                 android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/rules_no_smoking"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
@@ -306,11 +342,82 @@
                     android:button="@null" />
 
                 <TextView
+                    android:id="@+id/txt_rules_no_smoking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/smoking" />
 
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/rules_cats_allowed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rules_cats_ok"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/txt_rules_cats_allowed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cats" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/rules_dogs_allowed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rules_dogs_ok"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/txt_rules_dogs_allowed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dogs" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

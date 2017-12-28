@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
                 checkFlagStatus();
             }
         });
-        Typeface type = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirNextLTPro-Demi.otf");
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "fonts/AvenirNextLTPro-Demi.otf");
         TextView placeName = view.findViewById(R.id.place_txt);
         TextView placeName2 = view.findViewById(R.id.place_txt2);
         TextView seeall = view.findViewById(R.id.seeAll);
@@ -75,15 +75,15 @@ public class HomeFragment extends Fragment {
         placeName2.setTypeface(type);
         seeall.setTypeface(type);
         floating_btn_add_new_listing = view.findViewById(R.id.floating_btn_add_new_listing);
-        if((MainActivity.SaveSharedPreference.getUserName(getActivity()).length() == 0)){
+        if ((MainActivity.SaveSharedPreference.getUserName(getActivity()).length() == 0)) {
             floating_btn_add_new_listing.setVisibility(View.INVISIBLE);
-        }else{
+        } else {
             floating_btn_add_new_listing.setVisibility(View.VISIBLE);
         }
         floating_btn_add_new_listing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),NewListingsActivity.class));
+                startActivity(new Intent(getActivity(), NewListingsActivity.class));
             }
         });
 
@@ -93,15 +93,17 @@ public class HomeFragment extends Fragment {
 
     private void createListForFeaturedPlaces() {
         Bitmap ktm = BitmapFactory.decodeResource(getResources(),
-                R.drawable.ktm);
+                R.drawable.kathmandu);
         Bitmap bhkt = BitmapFactory.decodeResource(getResources(),
                 R.drawable.bhaktapur);
         Bitmap lalit = BitmapFactory.decodeResource(getResources(),
                 R.drawable.patan);
+        Bitmap pokhara = BitmapFactory.decodeResource(getResources(),
+                R.drawable.pokhara);
         placeList.add(new Place_List("Kathmandu", ktm));
         placeList.add(new Place_List("Bhaktapur", bhkt));
         placeList.add(new Place_List("Lalitpur", lalit));
-        placeList.add(new Place_List("Pokhara", ktm));
+        placeList.add(new Place_List("Pokhara", pokhara));
     }
 
     private void createListForFeaturedListings() {
@@ -141,13 +143,13 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    public void loadAllAdapters(){
+    public void loadAllAdapters() {
         //places recycler view 1 loader
         rv = (RecyclerView) view.findViewById(R.id.recycler_view_horizontal);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         rv.setLayoutManager(llm);
-        Place_List_Adapter pa = new Place_List_Adapter(placeList);
+        Place_List_Adapter pa = new Place_List_Adapter(placeList, getActivity());
         rv.setAdapter(pa);
         //listings recycler view 2 loader
         rv2 = (RecyclerView) view.findViewById(R.id.featured_listings_view);

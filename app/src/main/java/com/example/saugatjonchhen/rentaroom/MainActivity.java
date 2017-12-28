@@ -203,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
+
     private void changeTabsFont() {
         Typeface type = Typeface.createFromAsset(getAssets(), "fonts/AvenirNextLTPro-Demi.otf");
         ViewGroup vg = (ViewGroup) tabLayout.getChildAt(0);
@@ -285,7 +286,6 @@ public class MainActivity extends AppCompatActivity {
     public static void chat_btn_click(){
         TabLayout.Tab tab = tabLayout.getTabAt(3);
         tab.select();
-
     }
 
     public static class SaveSharedPreference {

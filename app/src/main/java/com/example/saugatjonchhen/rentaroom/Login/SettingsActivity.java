@@ -29,7 +29,8 @@ public class SettingsActivity extends AppCompatActivity {
     TextView title, txt_about, txt_signout;
     ImageButton btn_back;
     LinearLayout signOut;
-    LoginFragment lf = new LoginFragment();;
+    LoginFragment lf = new LoginFragment();
+    ;
     HomeFragment hf = new HomeFragment();
     GoogleApiClient mGoogleApiClient;
     private SharedPreferences facebookPrefs;
@@ -66,18 +67,23 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lf.login_flag = false;
-                LoginManager.getInstance().logOut();
-                signOutFromGoogle();
+                if (MainActivity.SaveSharedPreference.getUserName(SettingsActivity.this).equals("Facebook")) {
+                    LoginManager.getInstance().logOut();
+                } else if (MainActivity.SaveSharedPreference.getUserName(SettingsActivity.this).equals("Google")) {
+                    signOutFromGoogle();
+                }
                 MainActivity.SaveSharedPreference.setUserName(SettingsActivity.this, "");
                 facebookPrefs = getSharedPreferences("facebook", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = facebookPrefs.edit();
-                editor.putString("fullName","");
-                editor.putString("imageUrl","");
+                editor.remove("fullName");
+                editor.remove("imageUrl");
+//                editor.putString("fullName", "");
+//                editor.putString("imageUrl", "");
                 editor.commit();
-                lf.loginFrame = findViewById(R.id.loginFrame);
-                lf.loginFrame.setVisibility(View.VISIBLE);
-                lf.profileFrame = findViewById(R.id.profileFrame);
-                lf.profileFrame.setVisibility(View.GONE);
+//                lf.loginFrame = findViewById(R.id.loginFrame);
+//                lf.loginFrame.setVisibility(View.VISIBLE);
+//                lf.profileFrame = findViewById(R.id.profileFrame);
+//                lf.profileFrame.setVisibility(View.GONE);
                 finish();
             }
         });

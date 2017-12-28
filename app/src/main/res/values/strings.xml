@@ -44,12 +44,15 @@
     <string name="furnished">Furnished</string>
     <string name="parking">Parking</string>
     <string name="air_condition">Air Condition</string>
+    <string name="security">Security</string>
 
     <!--Rules-->
     <string name="drinking">No Drinking</string>
     <string name="drugs">No Drugs</string>
     <string name="pets">No Pets</string>
     <string name="smoking">No Smoking</string>
+    <string name="cats">Cats Allowed</string>
+    <string name="dogs">Dogs Allowed</string>
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
