@@ -60,6 +60,22 @@
             android:value="@string/api_map_key" />
 
         <activity android:name=".Home.Place_List_See_All"></activity>
+
+        <service
+            android:name=".Push_Norifications.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".Push_Norifications.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
 {
   "project_info": {
     "project_number": "765945604161",
-    "project_id": "firebase-rent-a-room"
+    "firebase_url": "https://fir-rent-a-room.firebaseio.com",
+    "project_id": "firebase-rent-a-room",
+    "storage_bucket": "firebase-rent-a-room.appspot.com"
   },
   "client": [
     {
@@ -12,6 +14,10 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "765945604161-nceidt9d3a32hjlgssde2g4humeo39nk.apps.googleusercontent.com",
+          "client_type": 3
+        },
         {
           "client_id": "765945604161-crp5hdsm6tcne4366cr93jmmek0vv9uq.apps.googleusercontent.com",
           "client_type": 3
@@ -35,11 +41,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765945604161-nceidt9d3a32hjlgssde2g4humeo39nk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }

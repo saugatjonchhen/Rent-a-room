@@ -113,8 +113,7 @@ public class SettingsActivity extends AppCompatActivity {
                     public void onResult(Status status) {
                         // ...
 //                        Toast.makeText(getApplicationContext(), "Logged Out", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), LoginFragment.class);
-                        startActivity(i);
+                        finish();
                     }
                 });
     }

@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -40,7 +41,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -192,6 +196,7 @@ public class LoginFragment extends Fragment {
                 loginFrame.setVisibility(View.GONE);
                 profileFrame.setVisibility(View.VISIBLE);
                 MainActivity.SaveSharedPreference.setUserName(getActivity(), "Google");
+
             } else {
                 login_flag = false;
                 profileFrame.setVisibility(View.GONE);
