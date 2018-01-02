@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.saugatjonchhen.rentaroom.Login.LoginFragment;
 import com.squareup.picasso.Callback;
@@ -47,6 +48,7 @@ public class Featured_listings_class_individual_item extends AppCompatActivity {
     protected int fav_flag = 0;
     protected TextView description, amenities, rules, placeName_individual_item;
     protected Button btn_bottom;
+    protected Bundle bb;
 
 
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -66,6 +68,7 @@ public class Featured_listings_class_individual_item extends AppCompatActivity {
         description = findViewById(R.id.description_title_individual_item);
         amenities = findViewById(R.id.txt_amenities);
         rules = findViewById(R.id.txt_rules);
+        btn_bottom = findViewById(R.id.btn_bottom);
         placeName_individual_item = findViewById(R.id.placeName_individual_item);
         description.setTypeface(type);
         amenities.setTypeface(type);
@@ -73,13 +76,12 @@ public class Featured_listings_class_individual_item extends AppCompatActivity {
         placeName_individual_item.setTypeface(type);
 
         Intent intent = getIntent();
-        Bundle bb = this.getIntent().getExtras();
+        bb = this.getIntent().getExtras();
         circularProfile = bb.getParcelable("circularImage");
         price = intent.getStringExtra("price");
         placeName = intent.getStringExtra("placeName");
         if (bb.containsKey("previewTest")) {
             if (bb.getString("previewTest").equals("preview")) {
-                btn_bottom = findViewById(R.id.btn_bottom);
                 btn_bottom.setText("Post Listing");
                 String ru = "रु.";
                 price = ru.concat(price);
@@ -136,6 +138,17 @@ public class Featured_listings_class_individual_item extends AppCompatActivity {
             }
         });
 
+        btn_bottom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bb.containsKey("previewTest")) {
+                    Toast.makeText(Featured_listings_class_individual_item.this, "It contains", Toast.LENGTH_SHORT).show();
+                    
+                } else {
+                    Toast.makeText(Featured_listings_class_individual_item.this, "Doesnot do anything for now!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override
