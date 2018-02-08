@@ -143,7 +143,7 @@ public class Featured_listings_class_individual_item extends AppCompatActivity {
             public void onClick(View v) {
                 if (bb.containsKey("previewTest")) {
                     Toast.makeText(Featured_listings_class_individual_item.this, "It contains", Toast.LENGTH_SHORT).show();
-                    
+
                 } else {
                     Toast.makeText(Featured_listings_class_individual_item.this, "Doesnot do anything for now!!", Toast.LENGTH_SHORT).show();
                 }
